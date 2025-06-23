@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Thrifts</title>
-    <link rel="stylesheet" href="css/style_main.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
@@ -22,12 +22,11 @@
                     <div class="submenu">
                         <div class="column">
                             <h4>Clothing</h4>
-                            <a href="#">New Arrivals</a>
+                            <a href="products.html">New Arrivals</a>
                             <a href="#">T-Shirts & Polos</a>
                             <a href="#">Pants</a>
                             <a href="#">Shorts</a>
                             <a href="#">Hoodies</a>
-                            <a href="#">Jackets</a>
                         </div>
                     </div>
                 </li>
@@ -41,8 +40,6 @@
                             <a href="#">New Arrivals</a>
                             <a href="#">Tops</a>
                             <a href="#">Pants</a>
-                            <a href="#">Skirts</a>
-                            <a href="#">Jackets</a>
                             <a href="#">Hoodies</a>
                         </div>
                     </div>
@@ -56,9 +53,204 @@
                 </div>
                 <a href="#" aria-label="User"><i class="fas fa-user"></i></a>
                 <a href="#" aria-label="Liked"><i class="fas fa-heart"></i></a>
-                <a href="#" aria-label="Cart"><i class="fas fa-bag-shopping"></i></a>
+                <div class="cart-wrapper">
+                    <a href="#" aria-label="Cart"><i class="fas fa-bag-shopping"></i></a>
+                    <div class="cart-dropdown">
+                        <p><strong>YOUR CART IS EMPTY</strong></p>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
+
+    <div class="register-modal" id="registerModal">
+        <div class="register-content">
+            <span class="close-btn" id="closeRegister">&times;</span>
+            <h2>Be a Thrifter!</h2>
+            <p>Get free shipping, vouchers and members-only products when you're a thrifter.</p>
+    
+            <input type="email" id="email-register" placeholder="Email address*" required>
+            <label><input type="checkbox" id="age" required> Yes, I am 18+ years old.<span>*</span></label>
+            <label><input type="checkbox" id="terms" required> I acknowledge that I have read and understood the Thrifters Terms and Conditions, Website Terms and Conditions and bad thrifts Privacy Policy 
+                (as may be updated from time to time), and hereby agree to be bound by such terms.<span>*</span></label>
+            <label><input type="checkbox" id="news"> I agree to receive news, promotions, information regarding bad thrifts’ brand, products, 
+                activities and events, and any other marketing communications and materials by e-mail</label>
+    
+            <button class="submit-btn" id="continue-btn">Continue →</button>
+            <p>Have an account already? <a href="#" id="showLogin">Login Here!</a></p>
+
+        </div>
+    </div>
+
+    <div class="register-pass-modal" id="registerPassModal">
+        <div class="register-pass-content">
+            <span class="close-btn" id="closeRegisterPass">&times;</span>
+            <h1>bad thrifts.</h1>
+            <h2>Welcome Thrifter!</h2>
+            <p>To proceed, kindly fill up the form.</p>
+            <label for="first-name">First Name<span>*</span></label>
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <label for="last-name">Last Name<span>*</span></label>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+            <label for="birth-date">Birthday<span>*</span></label>
+            <input type="date" id="birth-date" name="Birth Date" required>
+            <label for="password">Password<span>*</span></label>
+            <input type="password" id="password" placeholder="Password" required>
+            <p class="pass-rule">Minimum of 8 characters.</p>
+            <label for="cPassword">Confirm Password<span>*</span></label>
+            <input type="password" id="cPassword" placeholder="Confirm Password" required>
+            <div class="show-password-wrapper">
+                <input type="checkbox" id="see-pass">
+                <label for="see-pass">Show Password</label>
+            </div>
+            <button class="create-pass" id="createPass">Create Account →</button>
+        </div>
+    </div>
+
+    <div class="login-modal" id="loginModal">
+        <div class="login-content">
+            <span class="close-btn" id="closeLogin">&times;</span>
+            <h3>bad thrifts.</h1>
+            <h2>Welcome back Thrifter!</h2>
+            <p>We miss you, login now to use your free shipping, vouchers and members-only products!</p>
+            <p class="sign-inP">Sign in</p>
+
+            <input type="email" id="email-login" placeholder="Email address*" required>
+            <input type="password" id="password-login" placeholder="Password*" required>
+
+            <button class="login-btn" id="loginBtn">Login →</button>
+
+            <p class="showRegister">Don't have an account yet? <a href="#" id="showRegister">Create Account!</a></p>
+        </div>
+    </div>
+
+    <section class="products-new" id="productsNew">
+        <div class="section-title">
+            <h1>New Arrivals</h1>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product1.jpg" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+
+            <div class="product-card sold-out">
+                <div class="product-image">
+                    <img src="img/product2.avif" alt="Product 2">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱780</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Sold Out!</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product1.jpg" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product1.jpg" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product1.jpg" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product1.jpg" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product1.jpg" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product1.jpg" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product2.avif" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product2.avif" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <span class="price">₱600</span>
+                    <h3>Lorem Ipsum</h3>
+                    <p>Lorem Ipsum</p>
+                    <span class="stock-label">Stock: 1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>CMS Co. | Contact Us: cmsCO@gmail.com</p>
+    </footer>
 </body>
+<script src="js/main_js.js" defer></script>
 </html>

@@ -1,3 +1,5 @@
+// display/preview
+
 const images = document.querySelectorAll('.fade-image');
 let current = 0;
 
@@ -6,6 +8,8 @@ images[current].classList.remove('active');
     current = (current + 1) % images.length;
     images[current].classList.add('active');
 }, 1000);
+
+// register & login functions
 
 document.addEventListener("DOMContentLoaded", function () {
     const registerModal = document.getElementById("registerModal");
@@ -93,6 +97,30 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('click', function (e) {
         if (e.target === loginModal) {
             loginModal.style.display = 'none';
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const showRegisterLink = document.getElementById("showRegister");
+    const registerModal = document.getElementById("registerModal");
+    const closeRegisterBtn = document.getElementById("closeRegister");
+
+    const loginModal = document.getElementById("loginModal"); // <-- login modal
+
+    showRegisterLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        registerModal.style.display = "block";
+        if (loginModal) loginModal.style.display = "none"; // <-- hide login modal
+    });
+
+    closeRegisterBtn.addEventListener("click", function () {
+        registerModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (e) {
+        if (e.target === registerModal) {
+            registerModal.style.display = "none";
         }
     });
 });
@@ -191,6 +219,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//login
+
 document.addEventListener("DOMContentLoaded", () => {
     const loginBtn = document.getElementById("loginBtn");
     const loginModal = document.getElementById("loginModal");
@@ -214,3 +244,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//products
+document.addEventListener("DOMContentLoaded", function () {
+    const productCards = document.querySelectorAll(".product-card");
+
+    productCards.forEach((card) => {
+      card.style.cursor = "pointer"; // make it look clickable
+      card.addEventListener("click", function () {
+        window.location.href = "view_product.html";
+      });
+    });
+});

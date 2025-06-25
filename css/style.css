@@ -266,16 +266,18 @@ nav {
   color: black;
 }
 
-.slide-text button {
+.shop-btn {
   background: white;
+  color: #000;
   border: 2px solid black;
   padding: 6px 12px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.slide-text button:hover {
+.shop-btn:hover {
   background: black;
   color: white;
 }

@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
     productCards.forEach((card) => {
       card.style.cursor = "pointer"; // make it look clickable
       card.addEventListener("click", function () {
-        window.location.href = "view_product.html";
+        window.location.href = "/viewProducts";
       });
     });
 });

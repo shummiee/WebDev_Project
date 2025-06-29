@@ -54,7 +54,7 @@ nav {
 /* Middle navigation links */
 /* Main nav layout */
 .main-nav {
-  list-style: none;
+  
   display: flex;
   gap: 30px;
   padding: 0;
@@ -1219,4 +1219,27 @@ footer p {
   margin-top: -4px;
 }
 
+/*admin css*/
+
+.admin-nav a {
+  
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 0;
+  transition: color 0.2s ease;
+  margin-right: 50px;
+}
+
+.admin-nav a:hover {
+  color: #333;
+}
+
+.add-product-content {
+  margin-top: 100px;
+}
+
+.men-cat {
+  margin-top: 100px;
+}
 
